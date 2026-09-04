@@ -24,6 +24,10 @@ export const NAVIGATION_GROUPS = [
         label: "Avatar",
       },
       {
+        href: "/docs/components/breadcrumb",
+        label: "Breadcrumb",
+      },
+      {
         href: "/docs/components/button",
         label: "Button",
       },
