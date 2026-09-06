@@ -22,23 +22,22 @@ function BreadcrumbPage() {
         description="Used to display a page's location within a site's hierarchical structure."
         githubLink="https://github.com/malcodeman/hygge-ui/blob/main/src/hygge-ui/breadcrumb.tsx"
         className="mb-2"
-        verified
       />
       <PagePreviewCodeTabs
         preview={
           <Breadcrumb
             items={[
-              { title: "Docs", url: "#" },
-              { title: "Components", url: "#" },
-              { title: "Props" },
+              { title: "Docs", url: "docs/components/breadcrumb#" },
+              { title: "Components", url: "docs/components/breadcrumb#" },
+              { title: "Props", url: "docs/components/breadcrumb#" },
             ]}
           />
         }
         code={`<Breadcrumb
   items={[
-    { title: "Docs", url: "#" },
-    { title: "Components", url: "#" },
-    { title: "Props" },
+    { title: "Docs", url: "docs/components/breadcrumb#" },
+    { title: "Components", url: "docs/components/breadcrumb#" },
+    { title: "Props", url: "docs/components/breadcrumb#" },
   ]}
 />`}
       />
