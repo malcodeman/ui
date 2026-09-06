@@ -51,6 +51,7 @@ import { Route as DocsComponentsCheckboxRouteImport } from './routes/docs.compon
 import { Route as DocsComponentsCarouselRouteImport } from './routes/docs.components.carousel'
 import { Route as DocsComponentsCardRouteImport } from './routes/docs.components.card'
 import { Route as DocsComponentsButtonRouteImport } from './routes/docs.components.button'
+import { Route as DocsComponentsBreadcrumbRouteImport } from './routes/docs.components.breadcrumb'
 import { Route as DocsComponentsAvatarRouteImport } from './routes/docs.components.avatar'
 import { Route as DocsComponentsAlertRouteImport } from './routes/docs.components.alert'
 import { Route as DocsComponentsAccordionRouteImport } from './routes/docs.components.accordion'
@@ -274,6 +275,12 @@ const DocsComponentsButtonRoute = DocsComponentsButtonRouteImport.update({
   path: '/docs/components/button',
   getParentRoute: () => rootRouteImport,
 } as any)
+const DocsComponentsBreadcrumbRoute =
+  DocsComponentsBreadcrumbRouteImport.update({
+    id: '/docs/components/breadcrumb',
+    path: '/docs/components/breadcrumb',
+    getParentRoute: () => rootRouteImport,
+  } as any)
 const DocsComponentsAvatarRoute = DocsComponentsAvatarRouteImport.update({
   id: '/docs/components/avatar',
   path: '/docs/components/avatar',
@@ -308,6 +315,7 @@ export interface FileRoutesByFullPath {
   '/docs/components/accordion': typeof DocsComponentsAccordionRoute
   '/docs/components/alert': typeof DocsComponentsAlertRoute
   '/docs/components/avatar': typeof DocsComponentsAvatarRoute
+  '/docs/components/breadcrumb': typeof DocsComponentsBreadcrumbRoute
   '/docs/components/button': typeof DocsComponentsButtonRoute
   '/docs/components/card': typeof DocsComponentsCardRoute
   '/docs/components/carousel': typeof DocsComponentsCarouselRoute
@@ -357,6 +365,7 @@ export interface FileRoutesByTo {
   '/docs/components/accordion': typeof DocsComponentsAccordionRoute
   '/docs/components/alert': typeof DocsComponentsAlertRoute
   '/docs/components/avatar': typeof DocsComponentsAvatarRoute
+  '/docs/components/breadcrumb': typeof DocsComponentsBreadcrumbRoute
   '/docs/components/button': typeof DocsComponentsButtonRoute
   '/docs/components/card': typeof DocsComponentsCardRoute
   '/docs/components/carousel': typeof DocsComponentsCarouselRoute
@@ -407,6 +416,7 @@ export interface FileRoutesById {
   '/docs/components/accordion': typeof DocsComponentsAccordionRoute
   '/docs/components/alert': typeof DocsComponentsAlertRoute
   '/docs/components/avatar': typeof DocsComponentsAvatarRoute
+  '/docs/components/breadcrumb': typeof DocsComponentsBreadcrumbRoute
   '/docs/components/button': typeof DocsComponentsButtonRoute
   '/docs/components/card': typeof DocsComponentsCardRoute
   '/docs/components/carousel': typeof DocsComponentsCarouselRoute
@@ -458,6 +468,7 @@ export interface FileRouteTypes {
     | '/docs/components/accordion'
     | '/docs/components/alert'
     | '/docs/components/avatar'
+    | '/docs/components/breadcrumb'
     | '/docs/components/button'
     | '/docs/components/card'
     | '/docs/components/carousel'
@@ -507,6 +518,7 @@ export interface FileRouteTypes {
     | '/docs/components/accordion'
     | '/docs/components/alert'
     | '/docs/components/avatar'
+    | '/docs/components/breadcrumb'
     | '/docs/components/button'
     | '/docs/components/card'
     | '/docs/components/carousel'
@@ -556,6 +568,7 @@ export interface FileRouteTypes {
     | '/docs/components/accordion'
     | '/docs/components/alert'
     | '/docs/components/avatar'
+    | '/docs/components/breadcrumb'
     | '/docs/components/button'
     | '/docs/components/card'
     | '/docs/components/carousel'
@@ -606,6 +619,7 @@ export interface RootRouteChildren {
   DocsComponentsAccordionRoute: typeof DocsComponentsAccordionRoute
   DocsComponentsAlertRoute: typeof DocsComponentsAlertRoute
   DocsComponentsAvatarRoute: typeof DocsComponentsAvatarRoute
+  DocsComponentsBreadcrumbRoute: typeof DocsComponentsBreadcrumbRoute
   DocsComponentsButtonRoute: typeof DocsComponentsButtonRoute
   DocsComponentsCardRoute: typeof DocsComponentsCardRoute
   DocsComponentsCarouselRoute: typeof DocsComponentsCarouselRoute
@@ -945,6 +959,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof DocsComponentsButtonRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/docs/components/breadcrumb': {
+      id: '/docs/components/breadcrumb'
+      path: '/docs/components/breadcrumb'
+      fullPath: '/docs/components/breadcrumb'
+      preLoaderRoute: typeof DocsComponentsBreadcrumbRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/docs/components/avatar': {
       id: '/docs/components/avatar'
       path: '/docs/components/avatar'
@@ -990,6 +1011,7 @@ const rootRouteChildren: RootRouteChildren = {
   DocsComponentsAccordionRoute: DocsComponentsAccordionRoute,
   DocsComponentsAlertRoute: DocsComponentsAlertRoute,
   DocsComponentsAvatarRoute: DocsComponentsAvatarRoute,
+  DocsComponentsBreadcrumbRoute: DocsComponentsBreadcrumbRoute,
   DocsComponentsButtonRoute: DocsComponentsButtonRoute,
   DocsComponentsCardRoute: DocsComponentsCardRoute,
   DocsComponentsCarouselRoute: DocsComponentsCarouselRoute,
