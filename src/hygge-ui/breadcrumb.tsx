@@ -19,7 +19,7 @@ export function Breadcrumb(props: BreadcrumbProps) {
           const last = index === items.length - 1;
 
           return (
-            <Fragment key={`${String(item.title)}-${index}`}>
+            <Fragment key={index}>
               <li className="inline-flex items-center">
                 {last ? (
                   <span className="text-fg-default">{item.title}</span>
@@ -29,7 +29,7 @@ export function Breadcrumb(props: BreadcrumbProps) {
                   <span>{item.title}</span>
                 )}
               </li>
-              {!last ? <li>{separator}</li> : null}
+              {last ? null : <li>{separator}</li>}
             </Fragment>
           );
         })}
